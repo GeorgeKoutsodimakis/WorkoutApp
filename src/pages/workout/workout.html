@@ -1,16 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Workouts
+      Workout App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="workouts">
+
 <h2>Workouts</h2>
-<ion-list>
-<ion-item *ngFor="let workout of workouts" (click)="workoutSelected($event,workout)">
+
+  <ion-card *ngFor="let workout of workouts" (click)="workoutSelected($event,workout)">
+    <ion-card-header>
+
   {{workout.title}}
-</ion-item>
-</ion-list>
+</ion-card-header>
+
+</ion-card>
+
+
 </ion-content>
